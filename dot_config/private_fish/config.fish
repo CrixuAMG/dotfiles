@@ -1,4 +1,6 @@
 alias vim nvim
+alias lg lazygit
+alias lq lazysql
 alias ls "eza --long --git --header --icons=always"
 
 if status is-interactive
@@ -9,6 +11,7 @@ if status is-interactive
     thefuck --alias | source
     fzf --fish | source
     atuin init fish | source
+    chezmoi completion fish --output=~/.config/fish/completions/chezmoi.fish
 
     function bind_bang
         switch (commandline -t)[-1]
